@@ -375,3 +375,114 @@ vehicleRepo.save(bike);
 List<Vehicle> vehicles = vehicleRepo.findAll();
 
 
+
+// DTO PROJECTIONS
+
+
+public interface studentNameEmail{
+    String getName();
+    String getEmail();
+}
+
+
+public interface StudentRepository extends JpaRepository<Student, Long>{
+    List<StudentNameEmail> findByDepartment(String department);
+}
+
+public class StudentDTO{
+    private String name;
+    private String email;
+
+    public class StudentDTO(String name, String email){
+        this.name = name;
+        this.email = email;
+    }
+}
+
+// Repository
+// JPQL
+@Query("SELECT new com.example.dto.StudentDTO(s.name, s.email) FROM Student s WHERE s.department = :dept")
+List<StudentDTO> findStudentsByDepartment(@Param("dept") String department);
+
+
+// native SQL
+@Query(value = "SELECT name, email FROM student WHERE department = :dept", nativeQuery = true)
+List<StudentDTO> findStudentsNative(@Param("dept") String department);
+
+
+
+// Repository
+public interface StudentRepository extends JpaRepository<Student, Long>{
+
+    @Query("SELECT new com.example.dto")
+}
+
+
+// entity
+@Entity
+public class Student{
+    @Id
+    @GeneratedValue 
+    private Long id;
+    private String name;
+    private String email;
+    private String department;
+}
+
+// Dto
+public class StudentDto{
+    private String name;
+    private String email;
+    public StudentDto(String name, String email){
+        this.name = name;
+        this.email = email;
+    }
+}
+
+// repository
+public interface StudentRepository extends JpaRepository<Student, Long>{
+    @Query("SELECT new com.example.dto.StudentDto(s.name, s.email) FROM Student s WHERE s.department = :dept")
+    List<StudentDto> findByDepartment(@Param("dept") String department);
+}
+
+// controller
+@GetMapping("/students/{dept}")
+public List<StudentDto> getStudents(@PathVariable String dept){
+    return studentRepo.findByDepartment(dept);
+}
+
+
+
+// Transactions and Propagation
+
+
+@Service
+public class StudentService{
+
+    @Autowired
+    private StudentRepository studentRepo;
+
+    @Transactional(propagation = Propagation.REQUIRED) // join existing else create a new one
+    public void createStudent(Student student){
+        studentRepo.save(student);
+        // more operations
+    }
+
+    @Transactional(propation = Propagation.REQUIRES_NEW) // always start a new transaction
+    public void logAudit(String action){
+        // independent transaction
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public void riskyOperation(){ ... }
+
+    @Transactional
+    public void inner(){
+        // some DB operation
+    }
+
+    public void outer(){
+        inner(); // inner() @Transactional won't start a new transaction
+    }
+}
+
