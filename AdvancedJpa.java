@@ -33,3 +33,18 @@ public void updataBalance(Long accountId, Double amount){
     em.persist(account);
 }
 
+
+// Pagination and Sorting
+
+
+public interface StudentRepository extends JpaRepository<Student, Long>{
+    Page<Student> findByDepartment(String dept, Pageable pageable);
+}
+
+Pageable pageable = PageRequest.of(0, 10, Sort.by("name", ascending()));
+Page<Student> page = studentRepo.findByDepartment("CS", pageable);
+
+System.out.println("Total pages: " + page.getTotalPages());
+System.out.println("Total elements: " + page.getTotalElements());
+
+
