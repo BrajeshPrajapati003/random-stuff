@@ -278,3 +278,51 @@ try {
 } catch (DataAccessException e) {
     // handle general DB access issues
 }
+
+// 1.
+SessionFactory factory = new Configuration().configure().buildSessionFactory();
+Session session = factory.openSession();
+Transaction tx = session.beginTransaction();
+
+
+tx.commit();
+session.close();
+
+// 2.
+SessionFactory factory = new Configuration().configure().buildSessionFactory();
+SessionFactory factory = new Configuration().configure().buildSessionFactory();
+SessionFactory factory = new Configuration().configure().buildSessionFactory();
+
+// 2.
+Session session = factory.openSesson();
+Transaction tx = session.beginTransaction();
+
+// 3.
+Session session = factory.openSession();
+Transaction tx = session.beginTransaction();
+
+
+tx.commit();
+session.close();
+
+
+
+Session session = null;
+Transaction tx = null;
+
+try{
+    session = factory.openSession();
+    tx = session.beginTransaction();
+
+    // Hibernate operations
+    Student s = session.get(Student.class, 1);
+    s.setAge(21);
+    session.update(s);
+
+    tx.commit();
+}catch(HibernateException e){
+    if(tx != null) tx.rollback();
+    e.printStackTrace();
+}finally{
+    if(session != null) session.close();
+}
