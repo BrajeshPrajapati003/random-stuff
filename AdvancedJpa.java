@@ -49,6 +49,21 @@ System.out.println("Total elements: " + page.getTotalElements());
 
 
 
+// 1 Oct 2k25
 
 
 
+public interface StudentRepository extends JpaRepository<Student, Long>{
+    Page<Student> findByDepartment(String dept, Pageable pageable);
+}
+
+
+public interface StudentRepository extends JpaRepository<Student, Long>{
+    Page<Student> findByDepartment(String dept, Pageable pageable);
+}
+
+Pageable pageable = PageRequest.of(0, 10, Sort.by("name").ascending());
+Page<Student> page = studentRepo.findByDepartment("CS", pageable);
+
+System.out.println("Total Pages: " + page.getTotalPages());
+System.out.println("Total Elements: " + page.getTotalElements());
