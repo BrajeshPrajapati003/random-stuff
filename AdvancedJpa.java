@@ -3,6 +3,8 @@
 
 // Locking in JPA
 
+import javax.annotation.processing.Generated;
+
 public class AdvancedJpa { }
 
 @Entity
@@ -119,3 +121,32 @@ class Learn{
 
     }
 }
+
+
+// Entity (mapped to DB)
+@Entity
+public class Employee{
+    @Id @GeneratedValue
+    private Long id;
+    private String firstName;
+    private String lastName;
+    private String department;
+    private Double salary;
+    // getters and setters
+}
+
+// DTO (exposed to client)
+public class EmployeeDTO{
+    private String fullName;
+    private String department;
+    private Double salary;
+
+
+    // constructor
+    public EmployeeDTO(String fullname, String dept, String salary){
+        this.fullName = fullname;
+        this.department = dept;
+        this.salary = salary;
+    }
+}
+
