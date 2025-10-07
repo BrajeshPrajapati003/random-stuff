@@ -66,7 +66,6 @@ public class Student{
 }
 
 
-
 Student s = new Student("John"); // Transient
 
 em.persistent(s); // Becomes managed
@@ -77,3 +76,5 @@ s.setName("Mike"); // Won't update DB
 
 em.merge(s); // Back to managed, update is tracked again
 em.remove(s); // removedl, will be deleted on commit
+
+
