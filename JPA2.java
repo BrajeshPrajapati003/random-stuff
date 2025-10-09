@@ -182,3 +182,34 @@ public class FullTimeEmployee extends Employee{
 }
 
 
+Pageable pageable = PageRequest.of(page, size, sort.by(sortBy).ascending());
+
+// Dynamic sorting by multiple fields
+Sort sort = Sort.by(Sort.Order.asc("title"), Sort.Order.desc("duration"));
+Pageable pageable = PageRequest.of(page, size, sort);
+
+Page<Workout> findByDifficultyLevel(String level, Pageable pageable);
+
+public Page<WorkoutDto> getWorkoutsFiltered(String difficulty, Pageable pageable){
+    return repo.findByDifficultyLevel(difficulty, pageable)
+        .map(this::mapToDto);
+}
+
+// Searching
+@GetMapping("/search")
+public List<WorkoutDto> searchWorkouts(@RequestParam String keyword){
+    return service.searchWorkouts(keyword);
+}
+
+
+// service
+public List<WorkoutDto> searchWorkouts(String keyword){
+    return repo.findByTitleContaininigIgnoreCase(keyword)
+        .stream()
+        .map(this::mapToDto)
+        .toList();
+}
+
+// repository
+List<Workout> findByTitleContainingIgnoreCase(String title);
+
