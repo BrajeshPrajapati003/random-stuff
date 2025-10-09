@@ -78,3 +78,107 @@ em.merge(s); // Back to managed, update is tracked again
 em.remove(s); // removedl, will be deleted on commit
 
 
+// 7 OCTOBER 2K25
+
+
+// Dynamic User Tracking
+
+@Component
+public class SpringSecurityAuditorAware implements AuditorAware<String> {
+    @Override
+    public Optional<String> getCurrentAuditor(){
+        return Optional.ofNullable(
+            SecurityContextHolder.getContext().getAuthentication().getName()
+        );
+    }
+}
+
+
+@MappedSuperClass
+@EntityListeners(AuditingEntityListener.class)
+public abstract class Auditable<U>{
+    @CreatedBy
+    private U createdBy;
+
+    @LastModifiedBy
+    private U lastModifiedBy;
+
+    @CreateDate
+    private LocalDateTime createdDate;
+
+    @LastModifiedDate
+    private LocalDateTime lastModifiedDate;
+}
+
+public class Employee extends Auditable<String>{
+    @Id @GeneratedValue
+    private Long id;
+    private String name;
+}
+
+
+// 9 OCT 2K25
+
+
+@Entity 
+@Getter @Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Inheritance(strategy = Inheritance.SINGLE_TABLE)
+@DiscriminatorColumn(name = "employee_table", discriminatorType = @DiscriminatorType.STRING)
+public abstract class Employee{
+    @Id GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private String department;
+    private Double salary;
+}
+
+@Entity @DiscriminatorValue("FULL_TIME")
+@Getter @Setter
+@NorArgsConstructor @AllArgsConstructor
+public class FullTimeEmployee extends Employee{
+    private Double bonus;
+}
+
+
+@Entity
+@DiscriminatorValue("INTERN")
+@Getter @Setter
+@NorArgsConstructor
+@AllArgsConstructor
+public class InternEmployee extends Employee{
+    private String collegeName;
+}
+
+
+@Transactional
+public EmployeeDto createEmployee(Employee emp){
+    Employee empDto = empRepo.save(emp);
+    return empDto.builder()
+    .id(empDto.getId())
+    .name(empDto.getName())
+    .department(empDto.getDepartment())
+    .salary(empDto.getSalary())
+    .build();
+}
+
+
+@PostMapping("fulltime")
+public EmployeeDto addFullTimeEmployee(@RequestBody FullTimeEmployee emp){
+    return empService.createEmployee(emp);
+}
+
+
+@SuperEmployee // Regular @Builder doesn't handle inheritance well; @SuperBuilder does.
+public abstract class Employee{
+
+}
+
+@SuperEmployee
+public class FullTimeEmployee extends Employee{
+
+}
+
+
