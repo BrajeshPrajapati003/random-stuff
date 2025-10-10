@@ -1,5 +1,7 @@
 // 6th October 2k25
 
+import java.lang.annotation.Inherited;
+
 public class JPA2 {
     
 }
@@ -182,3 +184,165 @@ public class FullTimeEmployee extends Employee{
 }
 
 
+Pageable pageable = PageRequest.of(page, size, sort.by(sortBy).ascending());
+
+// Dynamic sorting by multiple fields
+Sort sort = Sort.by(Sort.Order.asc("title"), Sort.Order.desc("duration"));
+Pageable pageable = PageRequest.of(page, size, sort);
+
+Page<Workout> findByDifficultyLevel(String level, Pageable pageable);
+
+public Page<WorkoutDto> getWorkoutsFiltered(String difficulty, Pageable pageable){
+    return repo.findByDifficultyLevel(difficulty, pageable)
+        .map(this::mapToDto);
+}
+
+// Searching
+@GetMapping("/search")
+public List<WorkoutDto> searchWorkouts(@RequestParam String keyword){
+    return service.searchWorkouts(keyword);
+}
+
+
+// service
+public List<WorkoutDto> searchWorkouts(String keyword){
+    return repo.findByTitleContaininigIgnoreCase(keyword)
+        .stream()
+        .map(this::mapToDto)
+        .toList();
+}
+
+// repository
+List<Workout> findByTitleContainingIgnoreCase(String title);
+
+
+// using record instead of a normal class for DTOs
+public record EmployeeDto(Long id, String department, String name, Double salary){
+
+}
+
+public EmployeeDto getEmployee(Long id){
+    Employee emp = employeeDto.findById(id).orElseThrow();
+    return new EmployeeDto(emp.getId(), emp.getName(), emp.getDepartment());
+}
+
+
+EmployeeDto dto = service.getEmployee(1L);
+System.out.println(dto.name()); // not getName(), just name()
+
+
+
+public record EmployeeDto(Long id, String name, String department, Double salary){
+    public EmployeeDto{
+        if(salary < 0) throw new IllegalArgumentException("Salary can't be negative");
+    }
+}
+
+
+@PostMapping("/employees")
+public ResponseEntity<EmployeeDto> create(@RequestBody EmployeeDto dto){
+    Employee saved = employeeService.create(dto);
+    return ResponseEntity.ok(new EmployeeDto(saved.getId(), saved.getName(), saved.getDepartment(), saved.getSalary()));
+}
+
+
+// Interface based DTO
+public interface EmployeeView{
+    String getName();
+    string getDepartment();
+}
+
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+    List<EmployeeView> findAllByDepartment(String department);
+}
+
+
+// Class based DTO
+public class EmployeeDto{
+    private final String name;
+    private final String department;
+
+    public EmployeeDto(String name, String department){
+        this.name = name;
+        this.department = department;
+    }
+
+    // getters
+}
+
+
+@Query("SELECT new com.fitinspiration.dto.EmployeeDto(e.name, e.department) FROM Employee e")
+List<EmployeeDto> findEmployeeDetails();
+
+
+// MapStruct
+@Mapper(ComponentModel = "spring")
+public interface EmployeeMapper{
+    EmployeeDto toDto(Employee entity);
+    Employee toEntity(EmployeeDto dto);
+}
+
+@Compile 
+public class EmployeeMapperImpl implements EmployeeMapper{
+    public EmployeeDto toDto(Employee entity){
+        if(entity == null) return null;
+        return new EmployeeDto(entity.getName(), entity.getDepartment());
+    }
+}
+
+
+// ModelMapper
+ModelMapper mapper = new ModelMapper();
+EmployeeDto dto = mapper.map(employee, EmployeeDto.class);
+
+
+@Entity
+public class User{
+    @Id @GeneratedValue
+    private Long id;
+    private String name;
+    private String email;
+    private String goal;
+}
+
+
+// Dto
+public record UserDto(String name, String email, String goal){}
+
+
+// Mapper(MapStruct)
+public interface UserMapper{
+    UserDto toDto(User user);
+    User toEntity(UserDto dto);
+}
+
+
+// Service
+@Service
+public class UserService{
+    @Autowired
+    private UserRepository repo;
+    @Autowired
+    private UserMapper mapper;
+
+    public List<UserDto> getAllUsers(){
+        return repo.findAll()
+            .stream()
+            .map(mapper::toDto)
+            .toList();
+    }
+}
+
+
+// Controller
+@RestController
+@RequestMapping("/api/users")
+public class UserController{
+    @Autowired
+    private UserService service;
+
+    @GetMapping
+    public List<UserDto> getAll(){
+        return service.getAllUsers();
+    }
+}
