@@ -2,6 +2,7 @@
 
 import java.lang.annotation.Inherited;
 
+
 public class JPA2 {
     
 }
@@ -346,3 +347,7 @@ public class UserController{
         return service.getAllUsers();
     }
 }
+
+
+
+
