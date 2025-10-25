@@ -1,0 +1,10 @@
+Header: {
+  "alg": "HS256",
+  "typ": "JWT"
+}
+
+Payload: {
+  "sub": "brajesh",
+  "roles": ["ROLE_USER"],
+  "exp": 1706640484
+}
