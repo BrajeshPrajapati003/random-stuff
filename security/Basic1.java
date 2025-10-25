@@ -1,6 +1,7 @@
+import java.beans.BeanProperty;
+
 public class Basic1{
     public static void main(String[] args){
-
 
         @Bean
         public void SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
@@ -64,4 +65,60 @@ public class MyUserDetails implements UserDetails{
     public boolean isEnabled(){ return true; }
 }
 
+
+// 24th OCT 2K25
+
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig{
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http){
+        http.csrf(csrf->csrf.disable())
+            .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/admin/**").hasRole('ADMIN')
+                .requestMatchers("/public/**").permitAll()
+                .anyRequest().authenticated()
+                )
+            .httpBasic(Customizer.withDefaults());
+        
+        return http.build();
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService(){
+        UserDetails user1 = User.withUsername("brajesh")
+                                .password(passwordEncoder().encode("brajesh@123"))
+                                .roles("USER")
+                                .build();
+
+        UserDetails admin = User.withUsername("admin")
+                                .password(PasswordEncoder().encode("admin@123"))
+                                .roles("ADMIN")
+                                .build();
+
+        return new InMemoryUserDetailsManager(user1, admin);
+    }
+}
+
+
+Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+String username = auth.getUsername();
+Collection<? extends GrantedAuthority> roles = auth.getAuthorities();
+
+
+@Bean
+public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
+    return config.getConfigurationManager();
+}
+
+
+@Override
+public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    return myRepo.findByUsername(username);
+}
 
