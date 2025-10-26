@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+
+/* 
+
+
+    FONT SIZE
+
+text-xs -> font-size: 0.75rem; // 12px
+text-sm -> font-size: 0.875rem;
+text-base -> font-size: 1rem;
+text-lg
+text-xl
+text-2xl
+text-3xl
+...
+text-9xl -> font-size: 8rem; // 128px
+
+
+    MARGIN VALUES
+
+m-0 -> margin: 0px;
+m-px -> margin: 1px;
+m-0.5 -> margin: 0.125rem; // 2px
+m-1
+m-1.5
+m-2
+...
+
+
+    MAX-WIDTH VALUES    
+
+max-w-0 -> max-width: 0px;
+max-w-px -> max-width: 1px;
+max-w-0.5 -> max-width: 0.125rem; // 2px
+...
+
+
+    LINE HEIGHTS
+
+leading-3 -> line-height: .75rem; // 12px
+leading-4 -> line-height: 1rem; // 16px
+...
+leading-10 -> line-height: 2.5rem; // 40px
+leading-none -> line-height: 1;
+leading-tight -> line-height: 1.25;
+leading-snug -> line-height: 1.375;
+leading-normal -> line-height: 1.5;
+leading-relaxed -> line-height: 1.625;
+leading-loose -> line-height: 2;
+
+
+    FONT WEIGHTS
+
+font-thin -> font-weight: 100;
+font-extralight -> font-weight: 200;
+font-light
+font-normal -> font-weight: 400 (default)
+font-medium
+font-semibold
+font-bold
+font-extrabold
+font-black -> font-weight: 900
+
+
+    TEXT ALIGNMENT
+
+text-left -> text-align: left;
+text-center
+text-right
+text-justify
+text-start
+text-end
+
+    DIRECTION
+
+dir="auto"
+dir="ltr"
+dir="rtl"
+
+
+    COLORS (50 to 950)
+
+black and white can be used without value (range)
+
+text-[color]-[value] -> text-red-400
+bg-[color]-[value] -> bg-red-400
+decoration-[color]-[value] -> decoration-blue-400
+
+
+    TEXT DECORATIONS
+
+no-underline -> text-decoration-line: none; (default)
+underline -> text-decoration-line: underline;
+overline -> text-decoration-line: overline;
+line-through -> text-decoration-line: line-through;
+
+    UNDERLINE OFFSET    
+
+underline-offset-auto -> text-underline-offset: auto;
+underline-offset-0 -> text-underline-offset: 0px;
+...
+underline-offset-8 -> text-underline-offset: 8px;
+
+
+    DECORATION THICKNESS
+
+decoration-0 -> text-decoration-thickness: 0px;
+decoration-1 -> text-decoration-thickness: 1px;
+decoration-2
+decoration-4
+decoration-8
+decoration-auto
+decoration-from-font -> text-decoration-thickness: from-font;
+
+
+    DECORATION STYLES
+
+decoration-solid -> text-decoration-style: solid; (default)
+decoration-double
+decoration-dotted
+decoration-dashed
+decoration-wavy
+
+
+LIST
+
+    list-disc p-[revert] -> to get the default list items
+    list-[square] p-[revert]
+    list-[circle] p-[revert]
+    list-[lower-roman] p-4
+    list-[decimal] p-2 list-inside
+    list-[upper-roman] p-[revert] list-outside -> outside position is default
+
+*/
