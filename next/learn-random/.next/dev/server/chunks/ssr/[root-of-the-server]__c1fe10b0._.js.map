@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/learn-random/app/users/%5BuserId%5D/page.tsx"],"sourcesContent":["interface Props{\r\n    params: { usersId: string };\r\n}\r\n\r\nconst userId = ({ params }: Props) => {\r\n    \r\n  return (\r\n    <div className=\"p-6\">\r\n      <h2 className=\"text-pink-400\">User ID: {params.usersId}</h2>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default userId\r\n"],"names":[],"mappings":";;;;;;AAIA,MAAM,SAAS,CAAC,EAAE,MAAM,EAAS;IAE/B,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC;YAAG,WAAU;;gBAAgB;gBAAU,OAAO,OAAO;;;;;;;;;;;;AAG5D;uCAEe","debugId":null}}]
+}

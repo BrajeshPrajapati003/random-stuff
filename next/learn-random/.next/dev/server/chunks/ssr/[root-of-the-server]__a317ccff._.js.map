@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/learn-random/app/users/page.tsx"],"sourcesContent":["import Link from \"next/link\";\r\n\r\nconst page = () => {\r\n\r\n    const userId = \"101\";\r\n\r\n  return (\r\n    <div className=\"p-6\">\r\n      <h1 className=\"text-red-300 font-bold text-3xl\">This is Users Home Page</h1>\r\n\r\n      <Link href={`/users/${userId}`} className=\"text-black rounded-2xl bg-blue-400 mt-10 p-2 cursor-pointer\"> Click for user {userId}</Link>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default page\r\n"],"names":[],"mappings":";;;;;AAAA;;;AAEA,MAAM,OAAO;IAET,MAAM,SAAS;IAEjB,qBACE,8OAAC;QAAI,WAAU;;0BACb,8OAAC;gBAAG,WAAU;0BAAkC;;;;;;0BAEhD,8OAAC,0LAAI;gBAAC,MAAM,CAAC,OAAO,EAAE,QAAQ;gBAAE,WAAU;;oBAA8D;oBAAiB;;;;;;;;;;;;;AAG/H;uCAEe","debugId":null}}]
+}
