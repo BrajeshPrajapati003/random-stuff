@@ -1,4 +1,5 @@
 import React from 'react'
+
 import Welcome from './learn1/Welcome'
 import ClassComp from './learn1/ClassComp'
 import Greeting from './learn1/Greeting'
@@ -26,6 +27,7 @@ import StatusMessage from './learn6-conditionalRendering/StatusMessage'
 import NameList from './learn7-list/NameList'
 import TodoList from './learn7-list/TodoList'
 import TodoList2 from './learn7-list/TodoList2'
+import StyledComponent from './learn8-styledcomponents/StyledComponent'
 
 const App = () => {
   return (
@@ -78,6 +80,9 @@ const App = () => {
 
       <TodoList />
       <TodoList2 />
+
+
+      <StyledComponent />
     </div>
   )
 }
