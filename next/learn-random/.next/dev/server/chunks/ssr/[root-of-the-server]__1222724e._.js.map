@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/learn-random/app/page.tsx"],"sourcesContent":["import Hello from './components/'\nconst Home = () => {\n\n  console.log(\"This is the Home component!\");\n  return (\n    <div className=\"text-2xl font-bold bg-red-300\">\n      Home, Welcome to Next.js\n      <Hello />\n    </div>\n  )\n}\n\nexport default Home\n"],"names":[],"mappings":";;;;;;;;;;;;AACA,MAAM,OAAO;IAEX,QAAQ,GAAG,CAAC;IACZ,qBACE,8OAAC;QAAI,WAAU;;YAAgC;0BAE7C,8OAAC;;;;;;;;;;;AAGP;uCAEe","debugId":null}}]
-}

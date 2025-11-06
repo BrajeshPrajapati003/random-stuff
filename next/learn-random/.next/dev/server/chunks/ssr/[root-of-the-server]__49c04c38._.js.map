@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/learn-random/app/dashboard/users/%5Bid%5D/page.tsx"],"sourcesContent":["\r\nconst UserDetails = async ({ params }: { params: Promise<{ id: string }>}) => {\r\n  const { id } = await params;\r\n  return (\r\n    <div>\r\n      <h1>Showing details for user #{id}</h1>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default UserDetails\r\n"],"names":[],"mappings":";;;;;;AACA,MAAM,cAAc,OAAO,EAAE,MAAM,EAAsC;IACvE,MAAM,EAAE,EAAE,EAAE,GAAG,MAAM;IACrB,qBACE,8OAAC;kBACC,cAAA,8OAAC;;gBAAG;gBAA2B;;;;;;;;;;;;AAGrC;uCAEe","debugId":null}}]
-}
