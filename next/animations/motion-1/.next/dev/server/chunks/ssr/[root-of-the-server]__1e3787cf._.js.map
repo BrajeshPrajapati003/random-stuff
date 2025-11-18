@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/animations/motion-1/app/page.tsx"],"sourcesContent":["import { hover } from \"motion\"\nimport * as motion from \"motion/react-client\"\n\n// function page() {\n//   return (\n//     <div>\n//       <motion.div \n//       className='box'\n//       animate={{x: 200}}/>\n//     </div>\n//   )\n// }\n\n// export default page\n\n\nconst Home = ()=> {\n  const boxVariants = {\n    initial: {scale: 1, rotate: 0, skew: 0},\n    hover: {\n      scale: 1.2,\n      rotate: 15,\n      skew: \"15deg\",\n      transitions: {duration: 0.3},\n    },\n    click: {scale: 0.9, rotate: -15, transition: {duration: 0.3}},\n  } \n\n  return <>\n    <motion.div className=\"w-40 bg-blue-500 rounded-lg\"\n    variants={boxVariants} />\n  </>\n}\n\nexport default Home;"],"names":[],"mappings":";;;;;AACA;;;AAEA,oBAAoB;AACpB,aAAa;AACb,YAAY;AACZ,qBAAqB;AACrB,wBAAwB;AACxB,6BAA6B;AAC7B,aAAa;AACb,MAAM;AACN,IAAI;AAEJ,sBAAsB;AAGtB,MAAM,OAAO;IACX,MAAM,cAAc;QAClB,SAAS;YAAC,OAAO;YAAG,QAAQ;YAAG,MAAM;QAAC;QACtC,OAAO;YACL,OAAO;YACP,QAAQ;YACR,MAAM;YACN,aAAa;gBAAC,UAAU;YAAG;QAC7B;QACA,OAAO;YAAC,OAAO;YAAK,QAAQ,CAAC;YAAI,YAAY;gBAAC,UAAU;YAAG;QAAC;IAC9D;IAEA,qBAAO;kBACL,cAAA,mRAAC,6QAAU;YAAC,WAAU;YACtB,UAAU;;;;;;;AAEd;uCAEe","debugId":null}}]
+}

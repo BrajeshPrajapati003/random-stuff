@@ -1,0 +1,61 @@
+[00:00:02.849] Server  LOG      ✓ Ready in 2s
+[00:00:15.898] Server  LOG      ○ Compiling / ...
+[00:00:35.047] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true cla cla true cla
+[00:01:42.955] Browser ERROR   ./next/animations/motion-1/app/page.tsx:31:17
+Parsing ecmascript source code failed
+  29 |   return <>
+  30 |     <motion.div className="w-40 bg-blue-500 rounded-lg"
+> 31 |     variants={}></motion.div>
+     |                 ^
+  32 |   </>
+  33 | }
+  34 |
+
+Expression expected
+[00:01:42.955] Browser ERROR   ./next/animations/motion-1/app/page.tsx:31:18
+Parsing ecmascript source code failed
+  29 |   return <>
+  30 |     <motion.div className="w-40 bg-blue-500 rounded-lg"
+> 31 |     variants={}></motion.div>
+     |                  ^^^^^^^^^^^^
+  32 |   </>
+  33 | }
+  34 |
+
+Unterminated regexp literal
+[00:01:57.063] Browser ERROR   ./next/animations/motion-1/app/page.tsx:32:5
+Parsing ecmascript source code failed
+  30 |     <motio className="w-40 bg-blue-500 rounded-lg"
+  31 |     variants={boxVariants}>>
+> 32 |   </>
+     |     ^
+  33 | }
+  34 |
+  35 | export default Home;
+
+Expression expected
+[00:01:57.063] Browser ERROR   ./next/animations/motion-1/app/page.tsx:31:28
+Parsing ecmascript source code failed
+  29 |   return <>
+  30 |     <motio className="w-40 bg-blue-500 rounded-lg"
+> 31 |     variants={boxVariants}>>
+     |                            ^
+  32 |   </>
+  33 | }
+  34 |
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:01:58.054] Browser ERROR   ./next/animations/motion-1/app/page.tsx:32:5
+Parsing ecmascript source code failed
+  30 |     <motio className="w-40 bg-blue-500 rounded-lg"
+  31 |     variants={boxVariants}>
+> 32 |   </>
+     |     ^
+  33 | }
+  34 |
+  35 | export default Home;
+
+Expression expected
+[00:01:59.704] Server  LOG      ✓ Compiled in 43ms
