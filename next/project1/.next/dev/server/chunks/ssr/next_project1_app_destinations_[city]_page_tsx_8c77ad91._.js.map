@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/project1/app/destinations/%5Bcity%5D/page.tsx"],"sourcesContent":["'use client'\r\nimport { useParams } from 'next/navigation'\r\nimport Paris from '@/src/assets/paris.webp'\r\nimport Tokyo from '@/src/assets/tokyo.jpg'\r\nimport Newyork from '@/src/assets/newyork.jpg'\r\nimport Image from 'next/image'\r\n\r\nfunction page() {\r\n\r\n    const cities = ['Paris', 'Tokyo', 'Newyork']\r\n    const {city} = useParams()\r\n\r\n  return (\r\n    <div className='text-gray-400 mt-[100px] w-[50%]'>\r\n      {city} is a beautiful city\r\n      <div>\r\n        city\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default page\r\n"],"names":[],"mappings":";;;;;AACA;AADA;;;AAOA,SAAS;IAEL,MAAM,SAAS;QAAC;QAAS;QAAS;KAAU;IAC5C,MAAM,EAAC,IAAI,EAAC,GAAG,IAAA,mKAAS;IAE1B,qBACE,kQAAC;QAAI,WAAU;;YACZ;YAAK;0BACN,kQAAC;0BAAI;;;;;;;;;;;;AAKX;uCAEe","debugId":null}}]
+}

@@ -1,0 +1,82 @@
+[00:00:01.646] Server  LOG      ✓ Ready in 1120ms
+[00:00:06.482] Server  LOG      ○ Compiling /contact ...
+[00:00:06.897] Server  ERROR    ⨯ ./next/learn4/app/contact/page.tsx:6:20
+Ecmascript file had an error
+  4 | function page() {
+  5 |
+> 6 |     const roboto = Roboto(
+    |                    ^^^^^^
+  7 |         { subsets: ['latin'], weight: ['400', '800'], display: 'swap' }
+  8 |     )
+  9 |
+
+Font loaders must be called and assigned to a const in the module scope
+
+
+[00:00:09.191] Browser ERROR   uncaughtError: Error: ./next/learn4/app/contact/page.tsx:6:20
+Ecmascript file had an error
+  4 | function page() {
+  5 |
+> 6 |     const roboto = Roboto(
+    |                    ^^^^^^
+  7 |         { subsets: ['latin'], weight: ['400', '800'], display: 'swap' }
+  8 |     )
+  9 |
+
+Font loaders must be called and assigned to a const in the module scope
+
+
+[00:00:09.552] Browser ERROR   ./next/learn4/app/contact/page.tsx:6:20
+Ecmascript file had an error
+  4 | function page() {
+  5 |
+> 6 |     const roboto = Roboto(
+    |                    ^^^^^^
+  7 |         { subsets: ['latin'], weight: ['400', '800'], display: 'swap' }
+  8 |     )
+  9 |
+
+Font loaders must be called and assigned to a const in the module scope
+[00:00:09.552] Browser ERROR   ./next/learn4/app/contact/page.tsx:6:20
+Ecmascript file had an error
+  4 | function page() {
+  5 |
+> 6 |     const roboto = Roboto(
+    |                    ^^^^^^
+  7 |         { subsets: ['latin'], weight: ['400', '800'], display: 'swap' }
+  8 |     )
+  9 |
+
+Font loaders must be called and assigned to a const in the module scope
+[00:00:09.923] Browser ERROR   ./next/learn4/app/contact/page.tsx:6:20
+Ecmascript file had an error
+  4 | function page() {
+  5 |
+> 6 |     const roboto = Roboto(
+    |                    ^^^^^^
+  7 |         { subsets: ['latin'], weight: ['400', '800'], display: 'swap' }
+  8 |     )
+  9 |
+
+Font loaders must be called and assigned to a const in the module scope
+[00:00:30.199] Server  ERROR    ⨯ ReferenceError: roboto is not defined
+[00:00:30.841] Server  LOG      ✓ Compiled in 62ms
+[00:00:31.173] Browser ERROR   uncaughtError: ReferenceError: roboto is not defined
+[00:00:32.600] Server  LOG      ✓ Compiled in 22ms
+[00:00:32.869] Server  ERROR    ⨯ ReferenceError: roboto is not defined
+[00:00:33.207] Browser ERROR   uncaughtError: ReferenceError: roboto is not defined
+[00:00:34.073] Server  LOG      ✓ Compiled in 23ms
+[00:00:34.444] Server  ERROR    ⨯ ReferenceError: roboto is not defined
+[00:00:34.963] Browser ERROR   uncaughtError: ReferenceError: roboto is not defined
+[00:02:52.197] Browser ERROR   ./next/learn4/app/contact/page.tsx:10:1
+Parsing ecmascript source code failed
+   8 |
+   9 |
+> 10 | \
+     | ^
+  11 | function page() {
+  12 |   return (
+  13 |     <div className={roboto.className}>
+
+Expected unicode escape
+[00:02:53.018] Server  LOG      ✓ Compiled in 26ms

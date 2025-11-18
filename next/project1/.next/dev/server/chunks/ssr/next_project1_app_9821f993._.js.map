@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/project1/app/favicon.ico.mjs%20%28structured%20image%20object%29"],"sourcesContent":["import src from \"IMAGE\";\nexport default { src, width: 1500, height: 1620 }\n"],"names":[],"mappings":";;;;AAAA;;uCACe;IAAE,KAAA,uJAAG;IAAE,OAAO;IAAM,QAAQ;AAAK","debugId":null}}]
+}

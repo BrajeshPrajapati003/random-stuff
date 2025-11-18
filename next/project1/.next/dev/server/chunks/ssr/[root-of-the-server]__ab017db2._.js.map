@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/project1/app/contact/page.tsx"],"sourcesContent":["import React from 'react'\r\n\r\nfunction page() {\r\n  return (\r\n    <div className='flex items-center justify-center mt-[100px] h-screen bg-gradient-to-r from-purple-600 via-pink-500 to-blue-900 bg-clip-text text-transparent text-4xl'>\r\n      Contact Page\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default page\r\n"],"names":[],"mappings":";;;;;;AAEA,SAAS;IACP,qBACE,kQAAC;QAAI,WAAU;kBAAwJ;;;;;;AAI3K;uCAEe","debugId":null}}]
+}

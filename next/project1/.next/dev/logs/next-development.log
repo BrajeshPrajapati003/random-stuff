@@ -1,0 +1,420 @@
+[00:00:04.408] Server  LOG      ✓ Ready in 3.3s
+[00:04:45.102] Server  LOG      ○ Compiling /destinations ...
+[00:07:25.096] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:08:36.612] Server  ERROR    ⨯ ReferenceError: city is not defined
+[00:08:36.861] Browser ERROR   uncaughtError: ReferenceError: city is not defined
+[00:08:40.707] Server  LOG      ✓ Compiled in 28ms
+[00:08:40.980] Server  ERROR    ⨯ ReferenceError: city is not defined
+[00:08:41.675] Browser ERROR   uncaughtError: ReferenceError: city is not defined
+[00:08:43.734] Server  LOG      ✓ Compiled in 25ms
+[00:08:44.313] Server  ERROR    ⨯ ReferenceError: city is not defined
+[00:08:45.492] Browser ERROR   uncaughtError: ReferenceError: city is not defined
+[00:08:48.777] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:5:3
+Parsing ecmascript source code failed
+  3 | function page() {
+  4 |   const city = 
+> 5 |   return (
+    |   ^^^^^^
+  6 |     <div className='text-white mt-[100px] w-[50%]'>
+  7 |       {city} is the best city.
+  8 |     </div>
+
+Expression expected
+[00:08:53.899] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:4:9
+Parsing ecmascript source code failed
+  2 |
+  3 | function page() {
+> 4 |   const {city}
+    |         ^^^^^^
+  5 |   return (
+  6 |     <div className='text-white mt-[100px] w-[50%]'>
+  7 |       {city} is the best city.
+
+'const' declarations must be initialized
+[00:08:57.107] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:08:57.930] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:04.710] Server  ERROR    ⨯ ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:09:04.825] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:05.395] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:05.395] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:06.231] Browser ERROR   uncaughtError: Error: ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:09:06.416] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:06.531] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:11.615] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:11.615] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:13.960] Server  ERROR    ⨯ ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:09:14.051] Server  ERROR    ⨯ ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:09:14.440] Browser ERROR   uncaughtError: Error: ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+[00:09:14.611] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:14.611] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:1:10
+Ecmascript file had an error
+> 1 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  2 | import React from 'react'
+  3 |
+  4 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:22.807] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:2:10
+Ecmascript file had an error
+  1 |
+> 2 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  3 | import React from 'react'
+  4 |
+  5 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:25.686] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:3:10
+Ecmascript file had an error
+  1 |
+  2 |
+> 3 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  4 | import React from 'react'
+  5 |
+  6 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:28.847] Browser ERROR   ./next/project1/app/destinations/[city]/@info/page.tsx:3:10
+Ecmascript file had an error
+  1 |
+  2 |
+> 3 | import { useParams } from 'next/navigation'
+    |          ^^^^^^^^^
+  4 | import React from 'react'
+  5 |
+  6 | function page() {
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[00:09:30.995] Server  LOG      ✓ Compiled in 44ms
+[00:09:32.063] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:47.420] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:47.450] Server  LOG      ✓ Compiled in 22ms
+[00:09:48.436] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:48.755] Server  LOG      ✓ Compiled in 62ms
+[00:09:48.756] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:50.094] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:50.558] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:50.592] Server  LOG      ✓ Compiled in 27ms
+[00:09:51.387] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:52.536] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:52.569] Server  LOG      ✓ Compiled in 25ms
+[00:09:53.652] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:54.920] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:54.949] Server  LOG      ✓ Compiled in 39ms
+[00:09:55.959] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:09:57.263] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:57.294] Server  LOG      ✓ Compiled in 27ms
+[00:09:58.207] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:03.822] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:03.852] Server  LOG      ✓ Compiled in 23ms
+[00:10:04.609] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:05.486] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:05.519] Server  LOG      ✓ Compiled in 34ms
+[00:10:06.493] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:10.396] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:10.428] Server  LOG      ✓ Compiled in 22ms
+[00:10:11.288] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:13.375] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:13.403] Server  LOG      ✓ Compiled in 45ms
+[00:10:14.360] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:16.678] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:16.695] Server  LOG      ✓ Compiled in 77ms
+[00:10:17.644] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:17.864] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:17.875] Server  LOG      ✓ Compiled in 31ms
+[00:10:18.915] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:19.062] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:19.094] Server  LOG      ✓ Compiled in 28ms
+[00:10:19.968] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:20.296] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:20.324] Server  LOG      ✓ Compiled in 33ms
+[00:10:21.220] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:21.480] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:21.515] Server  LOG      ✓ Compiled in 32ms
+[00:10:22.508] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:35.898] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:35.933] Server  LOG      ✓ Compiled in 26ms
+[00:10:36.776] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:40.614] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:40.644] Server  LOG      ✓ Compiled in 32ms
+[00:10:41.502] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:42.372] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:42.386] Server  LOG      ✓ Compiled in 27ms
+[00:10:43.317] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:44.553] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:44.584] Server  LOG      ✓ Compiled in 32ms
+[00:10:45.508] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:45.523] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:45.551] Server  LOG      ✓ Compiled in 40ms
+[00:10:46.662] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:10:46.807] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./next/project1/app/destinations/[city]/@info/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:10:46.846] Server  LOG      ✓ Compiled in 54ms
+[00:10:47.664] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:12:43.495] Server  LOG      ✓ Compiled in 26ms
+[00:13:59.750] Server  LOG      ✓ Compiled in 45ms
+[00:17:08.874] Server  LOG      ✓ Compiled in 51ms
+[00:19:29.406] Server  LOG      ✓ Compiled in 240ms
+[00:19:52.476] Browser ERROR   ./next/project1/app/page.tsx:9:1
+Parsing ecmascript source code failed
+   7 |     </div>
+   8 |   )
+>  9 | }
+     | ^
+  10 |
+  11 | export default page
+  12 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:19:54.233] Browser ERROR   ./next/project1/app/page.tsx:6:16
+Parsing ecmascript source code failed
+  4 |   return (
+  5 |     <div className='flex justify-center items-center font-bold h-full bg-gradient-to-r from-purple-600 via-pink-500 to-blue-900 bg-clip-text text-transparent text-4x'>
+> 6 |       <h1></h1>>
+    |                ^
+  7 |     </div>
+  8 |   )
+  9 | }
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:19:58.961] Browser ERROR   ./next/project1/app/page.tsx:9:1
+Parsing ecmascript source code failed
+   7 |     </div>
+   8 |   )
+>  9 | }
+     | ^
+  10 |
+  11 | export default page
+  12 |
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:20:03.080] Server  LOG      ✓ Compiled in 27ms
+[00:20:27.226] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true justify justify true justify
+[00:20:29.812] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true claq claq true claq
+[00:20:43.730] Server  LOG      ✓ Compiled in 27ms
+[00:21:37.798] Server  LOG      ✓ Compiled in 37ms
+[00:21:50.871] Server  LOG      ✓ Compiled in 62ms
+[00:22:06.681] Server  LOG      ✓ Compiled in 28ms
+[00:23:25.151] Server  LOG      ✓ Compiled in 78ms
+[00:23:27.980] Server  LOG      ✓ Compiled in 34ms
+[00:23:29.170] Server  LOG      ✓ Compiled in 58ms
+[00:23:30.599] Server  LOG      ✓ Compiled in 31ms
+[00:23:40.026] Server  LOG      ✓ Compiled in 91ms
+[00:23:43.847] Server  LOG      ✓ Compiled in 72ms
+[00:23:48.164] Server  LOG      ✓ Compiled in 77ms
+[00:23:50.038] Server  LOG      ✓ Compiled in 38ms
+[00:23:55.508] Server  LOG      ✓ Compiled in 31ms
+[00:23:56.648] Server  LOG      ✓ Compiled in 28ms
+[00:24:01.160] Server  LOG      ✓ Compiled in 39ms
+[00:24:01.790] Server  LOG      ✓ Compiled in 26ms
+[00:24:06.440] Server  LOG      ✓ Compiled in 41ms
+[00:24:08.120] Server  LOG      ✓ Compiled in 38ms
+[00:24:11.360] Server  LOG      ✓ Compiled in 29ms
+[00:26:26.461] Browser WARN    Image with src "/_next/static/media/tokyo.2a96cba7.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:26:30.176] Browser WARN    Image with src "/_next/static/media/paris.fd442f3e.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.

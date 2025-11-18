@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 26, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/project1/app/destinations/%5Bcity%5D/%40info/page.tsx"],"sourcesContent":["import { useParams } from 'next/navigation'\r\nimport React from 'react'\r\n\r\nfunction page() {\r\n  const {city} = useParams()\r\n  return (\r\n    <div className='text-white mt-[100px] w-[50%]'>\r\n      {city} is the best city.\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default page\r\n"],"names":[],"mappings":";;;;;AAAA;AAAA;;;AAGA,SAAS;IACP,MAAM,EAAC,IAAI,EAAC,GAAG,IAAA,sNAAS;IACxB,qBACE,kQAAC;QAAI,WAAU;;YACZ;YAAK;;;;;;;AAGZ;uCAEe","debugId":null}}]
+}
