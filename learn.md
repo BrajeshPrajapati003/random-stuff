@@ -9,7 +9,7 @@ Authentication{
 
 
 
-NOTES: 18-Nov
+**NOTES: 18-Nov**
 
 The PROBLEM:
 Modern browsers block API requests from different origins (domains) for security reasons.
@@ -61,4 +61,13 @@ http.sessionManagement(session -> session
     .maxSessionsPreventsLogin(true) // block new logins if user is already logged in
 );
 
+
+**NOTES: 19 NOV**
+
+
+1. JwtUtil
+2. JwtAuthenticationFilter
+3. CustomUserDetailsservice
+4. SecurityConfig
+5. AuthController
 
