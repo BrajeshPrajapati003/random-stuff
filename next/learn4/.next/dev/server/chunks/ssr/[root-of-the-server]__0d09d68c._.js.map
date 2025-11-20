@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/learn4/app/about/page.tsx"],"sourcesContent":["import React from 'react'\r\nimport Image from 'next/image'\r\n\r\nfunction page() {\r\n  return (\r\n    <div className='ml-3 mt-3'>\r\n      About page\r\n\r\n      <Image src={\"https://i.pinimg.com/736x/e5/8b/6f/e58b6f5a24ed863e02d5bff774f11c8a.jpg\"} alt='profile-pic' height={150} width={150} className='rounded-[700px]'/>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default page\r\n"],"names":[],"mappings":";;;;;AACA;;;AAEA,SAAS;IACP,qBACE,gQAAC;QAAI,WAAU;;YAAY;0BAGzB,gQAAC,0JAAK;gBAAC,KAAK;gBAA2E,KAAI;gBAAc,QAAQ;gBAAK,OAAO;gBAAK,WAAU;;;;;;;;;;;;AAGlJ;uCAEe","debugId":null}}]
+}

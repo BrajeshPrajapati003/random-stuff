@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/project1/app/destinations/page.tsx"],"sourcesContent":["'use client'\r\n\r\nimport { useRouter } from 'next/router'\r\nimport React from 'react'\r\n\r\nfunction page() {\r\n\r\n  const router = useRouter()\r\n\r\n  const destinations = ['Paris', 'Tokyo', 'NewYork']\r\n\r\n  return (\r\n    <div className='flex flex-col justify-center items-center h-screen gap-4 text-white'>\r\n      <div className='font-bold text-2xl'>Choose your Destination</div>\r\n      <div className='flex flex-col gap-4'>\r\n        {destinations.map((d, idx)=> (\r\n          <div key={idx} className='text-black bg-white font-bold text-2xl flex items-center justify-center rounded-xl w-[200px] h-[100px] hover:opacity-[0.5] transition-all' onClick={()=> router.push(\"/[city]\")}>{d}</div>\r\n        ))}\r\n      </div>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default page\r\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAKA,SAAS;IAEP,MAAM,SAAS,IAAA,+JAAS;IAExB,MAAM,eAAe;QAAC;QAAS;QAAS;KAAU;IAElD,qBACE,kQAAC;QAAI,WAAU;;0BACb,kQAAC;gBAAI,WAAU;0BAAqB;;;;;;0BACpC,kQAAC;gBAAI,WAAU;0BACZ,aAAa,GAAG,CAAC,CAAC,GAAG,oBACpB,kQAAC;wBAAc,WAAU;wBAA4I,SAAS,IAAK,OAAO,IAAI,CAAC;kCAAa;uBAAlM;;;;;;;;;;;;;;;;AAKpB;uCAEe","debugId":null}}]
+}

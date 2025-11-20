@@ -1,0 +1,7 @@
+spring:
+    kafka:
+        producer:
+            properties:
+                enable.idempotence: true
+                transactional.id: txn-order-producer
+

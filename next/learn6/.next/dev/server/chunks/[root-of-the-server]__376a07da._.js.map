@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/learn6/src/app/api/route.ts"],"sourcesContent":["import { NextRequest, NextResponse } from \"next/server\"\r\n\r\nexport async function GET() {\r\n    return NextResponse.json({\r\n        name:\"brajesh\",\r\n        age:21,\r\n    })\r\n}\r\n\r\nexport async function POST(req: NextRequest){\r\n    const {name, age} = await req.json()\r\n    return NextResponse.json({\r\n        name, age\r\n    })\r\n}\r\n"],"names":[],"mappings":";;;;;;AAAA;;AAEO,eAAe;IAClB,OAAO,kKAAY,CAAC,IAAI,CAAC;QACrB,MAAK;QACL,KAAI;IACR;AACJ;AAEO,eAAe,KAAK,GAAgB;IACvC,MAAM,EAAC,IAAI,EAAE,GAAG,EAAC,GAAG,MAAM,IAAI,IAAI;IAClC,OAAO,kKAAY,CAAC,IAAI,CAAC;QACrB;QAAM;IACV;AACJ","debugId":null}}]
+}

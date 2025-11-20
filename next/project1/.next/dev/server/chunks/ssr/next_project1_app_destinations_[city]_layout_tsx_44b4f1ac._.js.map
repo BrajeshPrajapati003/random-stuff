@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/project1/app/destinations/%5Bcity%5D/layout.tsx"],"sourcesContent":["import React, { Children } from 'react'\r\n\r\nfunction cityLayout({children, info}) {\r\n  return (\r\n    <div className='flex'>\r\n      {children}\r\n      {info}\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default cityLayout\r\n"],"names":[],"mappings":";;;;;;AAEA,SAAS,WAAW,EAAC,QAAQ,EAAE,IAAI,EAAC;IAClC,qBACE,kQAAC;QAAI,WAAU;;YACZ;YACA;;;;;;;AAGP;uCAEe","debugId":null}}]
+}

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/learn4/app/page.tsx"],"sourcesContent":["\n\nimport Link from 'next/link'\nimport { useRouter } from 'next/navigation'\nimport React from 'react'\n\nfunction page() {\n  const router = useRouter();\n  return (\n    <div>\n      <ul>\n        <Link href={\"/\"}><li>Home</li></Link>\n        <Link href={\"/about\"}><li>About</li></Link>\n        <Link href={\"/contact\"}><li>Contact</li></Link>\n\n        <button className='border bg-white text-black rounded-lg m-4 hover:bg-gray-300' onClick={()=> router.push(\"/router\")}>Click to go to Router</button>\n\n      </ul>\n    </div>\n  )\n}\n\nexport default page\n"],"names":[],"mappings":";;;;;AAEA;AACA;AAAA;;;;AAGA,SAAS;IACP,MAAM,SAAS,IAAA,oNAAS;IACxB,qBACE,gQAAC;kBACC,cAAA,gQAAC;;8BACC,gQAAC,4MAAI;oBAAC,MAAM;8BAAK,cAAA,gQAAC;kCAAG;;;;;;;;;;;8BACrB,gQAAC,4MAAI;oBAAC,MAAM;8BAAU,cAAA,gQAAC;kCAAG;;;;;;;;;;;8BAC1B,gQAAC,4MAAI;oBAAC,MAAM;8BAAY,cAAA,gQAAC;kCAAG;;;;;;;;;;;8BAE5B,gQAAC;oBAAO,WAAU;oBAA8D,SAAS,IAAK,OAAO,IAAI,CAAC;8BAAY;;;;;;;;;;;;;;;;;AAK9H;uCAEe","debugId":null}}]
+}

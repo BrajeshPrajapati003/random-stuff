@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/learn6/src/app/api/post/%5Bid%5D/route.tsx"],"sourcesContent":["import { NextRequest, NextResponse } from \"next/server\";\r\n\r\ninterface paramsType{\r\n  params: {\r\n    id: string\r\n  }\r\n}\r\n\r\nexport async function GET(\r\n  request: NextRequest,\r\n  context: paramsType,\r\n) {\r\n  const { id } = await context.params;\r\n  console.log(\"Received id:\", id);\r\n\r\n  return NextResponse.json({ postId: id });\r\n}\r\n"],"names":[],"mappings":";;;;AAAA;;AAQO,eAAe,IACpB,OAAoB,EACpB,OAAmB;IAEnB,MAAM,EAAE,EAAE,EAAE,GAAG,MAAM,QAAQ,MAAM;IACnC,QAAQ,GAAG,CAAC,gBAAgB;IAE5B,OAAO,kKAAY,CAAC,IAAI,CAAC;QAAE,QAAQ;IAAG;AACxC","debugId":null}}]
+}
