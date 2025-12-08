@@ -1,0 +1,231 @@
+# Application Name
+spring:
+  application:
+    name: database
+
+  #-------------------------------
+  # Enable ANSI colors
+  #-------------------------------
+  output:
+    ansi:
+      enabled: always
+
+  #-------------------------
+  # Active Profile
+  #-------------------------
+  profiles:
+    active: dev
+
+  #-------------------------------
+  # H2 Database
+  #-------------------------------
+  datasource:
+    url: jdbc:h2:mem:brajeshdb
+    driverClassName: org.h2.Driver
+    username: produser
+    password: supersecret
+
+    # Datasource connection pool tuning (HikariCP)
+    #-------------------------------
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      connection-timeout: 20000
+
+  #-------------------------------
+  # JPA / Hibernate Configs
+  #-------------------------------
+  jpa:
+    show-sql: true  # Show SQL queries in logs
+    properties:
+      hibernate:
+        format_sql: true  # Format SQL for readability
+    hibernate:
+      ddl-auto: update  # update -> dev only
+
+  #-------------------------------
+  # Enable H2 web console
+  # http://localhost:8080/h2-console
+  #-------------------------------
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: false  # H2 Console Security
+
+  #-------------------------------
+  # CORS (React frontend support)
+  #-------------------------------
+  web:
+    cors:
+      allowed-origins: "http://localhost:3000"
+      allowed-methods: "GET,POST,PUT,DELETE,OPTIONS"
+
+  #-------------------------------
+  # JSON pretty printing
+  #-------------------------------
+  jackson:
+    serialization:
+      indent-output: true
+
+
+#-------------------------
+# Dev Tools (Auto Restart)
+#-------------------------
+devtools:
+  restart:
+    enabled: true
+
+
+#-------------------------------
+# SQL Initialization
+#-------------------------------
+sql:
+  init:
+    mode: always
+    # In dev/test: always is great.
+    # In prod: Dangerous.
+
+
+#-------------------------
+# Server Config
+#-------------------------
+server:
+  # Change port
+  port: 6969
+
+  # Error page handling
+  error:
+    whitelabel:
+      enabled: false
+    include-message: always
+    include-stacktrace: on_param
+
+
+#------------------------------
+# Logging Configs
+#------------------------------
+logging:
+  level:
+    root: INFO  # Root log level
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE  # Verbose Hibernate logs
+
+
+#-------------------------------
+# Actuator (Health Checks)
+#-------------------------------
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Enable all actuator endpoints
+
+  endpoint:
+    health:
+      show-details: always  # Show full health info
+
+
+#--------------------------------
+# Custom Application Info
+#--------------------------------
+app:
+  description: "A microservice for handling database connections"
+  environment: "Development Server"
+
+
+application:
+  version: "3.5.5"
+  formatted-version: "(v3.5.5)"
+
+
+###################################################################
+# SECOND BLOCK — PostgreSQL CONFIG SET (Learning Purpose)
+# Keeping it below so you can compare H2 vs Postgres configs
+###################################################################
+
+postgres-example:
+  #-------------------------------
+  # Application Name (Override)
+  #-------------------------------
+  spring:
+    application:
+      name: DATABASE
+
+    profiles:
+      active: DEV
+
+    #-------------------------------
+    # PostgreSQL Database
+    #-------------------------------
+    datasource:
+      url: jdbc:postgresql://localhost:5432/postgres
+      username: dev
+      password: "changemeinprod!"
+      driver-class-name: org.postgresql.Driver
+
+      hikari:
+        maximum-pool-size: 10
+        minimum-idle: 5
+        idle-timeout: 30000
+        max-lifetime: 1800000
+        connection-timeout: 20000
+
+    #-------------------------------
+    # ANSI Colors
+    #-------------------------------
+    output:
+      ansi:
+        enabled: always
+
+  #-------------------------------
+  # Server (Prod style)
+  #-------------------------------
+  server:
+    port: 8080
+    error:
+      whitelabel:
+        enabled: false
+      include-message: always
+      include-stacktrace: on_param
+
+  #-------------------------------
+  # CORS for React Frontend
+  #-------------------------------
+  spring-web:
+    cors:
+      allowed-origins: "http://localhost:3000"
+      allowed-methods: "GET,POST,PUT,DELETE,OPTIONS"
+
+  #-------------------------------
+  # JSON Pretty Output
+  #-------------------------------
+  spring-jackson:
+    serialization:
+      indent-output: true
+
+  #-------------------------------
+  # SQL Init Mode
+  #-------------------------------
+  sql:
+    init:
+      mode: always
+
+  #-------------------------------
+  # App Details
+  #-------------------------------
+  app:
+    description: "A microservice for handling database connections"
+    environment: "Development Server"
+
+  application:
+    version: "3.5.5"
+    formatted-version: "(v3.5.5)"
