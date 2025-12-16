@@ -8,7 +8,7 @@ function AnimatedButton({
   
 }) {
   return (
-    <motion.button
+    <motion.button className='m-4'
         whileHover={{ scale: 1.05, y:-2 }}
         whileTap={{ scale: 0.9, y:1 }}
         transition={{ type: "spring", stiffness, damping}}
