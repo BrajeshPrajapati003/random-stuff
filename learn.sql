@@ -137,4 +137,47 @@
     )
     WHERE freq = 1;
 
+-- show patient_id & first_name from patients where first_name start & ends with 's' and is at least 6 characters long
+    SELECT patient_id, first_name
+    FROM patients
+    WHERE first_name LIKE 'S%____%s';
+----------------------------
+    SELECT patient_id, first_name
+    FROM patients
+    WHERE first_name LIKE 's____%s';
+-----------------------------
+    SELECT patient_id, first_name
+    FROM patients
+    WHERE
+        first_name LIKE 's%s' AND LEN(first_name) >= 6;
+-----------------------------
+    SELECT patient_id, first_name
+    FROM patients
+    WHERE
+        first_name LIKE 'S%'
+        AND first_name LIKE '%s'
+        AND LEN(first_name) >= 6;
+
+-- show patient_id, first_name, last_name from patients whose diagnosis is 'Dementia'. diagnosis column is in admissions table not in patients 
+    SELECT patients.patient_id, first_name, last_name
+    FROM patients
+    JOIN admissions
+    ON patients.patient_id = admissions.patient_id
+    WHERE diagnosis = 'Dementia';
+--------------------------
+    SELECT patient_id, first_name, last_name
+    FROM patients
+    WHERE patient_id IN (
+        SELECT patient_id
+        FROM admissions
+        WHERE diagnosis = 'Dementia';
+    );
+---------------------------
+    SELECT patient_id, first_name, last_name
+    FROM patients p
+    WHERE 'Dementia' IN (
+        SELECT diagnosis
+        FROM admissions
+        WHERE admissions.patient_id = p.patient_id;
+    );
 
