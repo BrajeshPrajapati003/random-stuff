@@ -832,3 +832,43 @@ Drop the last digit of the integer.
         selected_year
     ORDER BY doctor_id, selected_year;
 
+-- Show all the even numbered Order_id from the orders table.
+    SELECT order_id
+    FROM orders
+    WHERE order_id % 2 = 0;
+-------------------------------
+    SELECT order_id
+    FROM orders
+    WHERE mod(order_id, 2) = 0; -- CTX : [ mod(order_id, 2) = order_id % 2 ]
+
+-- Show the first_name, last_name, hire_date of the most recently hired employee.
+    SELECT 
+        first_name, 
+        last_name, 
+        hire_date
+    FROM employees
+    ORDER BY hire_date DESC
+    LIMIT 1;
+-------------------------------
+    SELECT 
+        first_name, 
+        last_name,
+        MAX(hire_date) AS hire_date
+    FROM employees;
+
+-- Show the average unit price rounded to 2 decimal places, the total units in stock, total discontinued products from the products table.
+    SELECT
+        ROUND(AVG(unit_price), 2) AS average_price,
+        SUM(units_in_stock) AS total_stock,
+        COUNT(
+            CASE WHEN  discontinued = TRUE THEN 1 END
+        ) AS total_discontinued
+    FROM products;
+----------------------------
+    SELECT 
+        ROUND(AVG(unit_price), 2) AS average_price,
+        SUM(units_in_stock) AS total_stock,
+        SUM(discontinued) AS total_discontinued
+    FROM products;
+
+-- 
