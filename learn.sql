@@ -871,4 +871,36 @@ Drop the last digit of the integer.
         SUM(discontinued) AS total_discontinued
     FROM products;
 
--- 
+-- Show the city, company_name, contact_name from the customers & suppliers table merged together. Create a column which contains 'customers' or 'suppliers' depending on the table it came from.
+    SELECT city, company_name, contact_name, 'customers' AS relationship
+    FROM customers
+    UNION
+    SELECT city, company_name, contact_name, 'suppliers'
+    FROM suppliers;
+
+-- Show the employee's first_name, last_name, a "num_orders" column with a count of the orders taken, & a column called "shipped" that displays "On Time" if the order shipped_date is <= required_date, "Late" if the order shipped late, "Not Shipped" if shipped_date is null. Order by employee last_name, then by first_name, & then descending by number of orders.
+    SELECT
+        first_name, last_name,
+        COUNT(order_id) AS 'num_orders',
+        CASE
+            WHEN shipped_date <= required_date THEN 'On Time'
+            WHEN shipped_date > required_date THEN 'Late'
+            WHEN shipped_date IS NULL THEN 'Not Shipped'
+        END AS shipped
+    FROM orders
+    JOIN employees ON employees.employee_id = orders.employee_id
+    GROUP BY first_name, last_name, shipped
+    ORDER BY last_name, first_name, COUNT(*) DESC;
+
+-- Show how much money the company lost due to giving discounts each year, order the years from most recent to least recent. Round to 2 decimal places.
+    Select 
+        YEAR(o.order_date) AS 'order_year' , 
+        ROUND(SUM(p.unit_price * od.quantity * od.discount),2) AS 'discount_amount' 
+    FROM orders o 
+    JOIN order_details od 
+        ON o.order_id = od.order_id
+    JOIN products p 
+        ON od.product_id = p.product_id
+    GROUP BY YEAR(o.order_date)
+    ORDER BY order_year DESC;
+
