@@ -28,11 +28,24 @@ import NameList from './learn7-list/NameList'
 import TodoList from './learn7-list/TodoList'
 import TodoList2 from './learn7-list/TodoList2'
 import StyledComponent from './learn8-styledcomponents/StyledComponent'
+import InputFieldClass from './learn10-forms/InputFieldClass'
+import InputField from './learn10-forms/CompleteFormFunction'
+import CheckboxClass from './learn10-forms/CheckboxClass'
+import RadioButtonsClass from './learn10-forms/RadioButtonsClass'
+import DropdownClass from './learn10-forms/DropdownClass'
+import CompleteFormClass from './learn10-forms/CompleteFormClass'
+import InputFieldFunction from './learn9-forms/InputFieldFunction'
+import CheckboxFunction from './learn9-forms/CheckboxFunction'
+import RadioBtnFunctions from './learn9-forms/RadioBtnFunctions'
+import SelectFunction from './learn9-forms/SelectFunction'
+import CompleteForm from './learn9-forms/CompleteForm'
 
 const App = () => {
   return (
-    <div>
-      <h2 className='text-red-400'>brajesh</h2>
+    <div className='bg-gray-300'>
+
+      <h2 className='text-red-400 text-center font-bold font-serif italic shadow-xl backdrop-blur-2xl hover:text-cyan-400 transition-all hover:scale-105 fixed ml-3 mt-3 bg-transparent hover:transform-3d'>BRAJESH</h2>
+
       <ClassComp />
       <Welcome/>
       <Greeting name='Brajesh'/>      
@@ -83,6 +96,19 @@ const App = () => {
 
 
       <StyledComponent />
+
+      <InputFieldClass />
+      <CheckboxClass />
+      <RadioButtonsClass />
+      <DropdownClass />
+      <CompleteFormClass />
+
+
+      <InputFieldFunction />
+      <CheckboxFunction />
+      <RadioBtnFunctions />
+      <SelectFunction />
+      <CompleteForm />
     </div>
   )
 }
