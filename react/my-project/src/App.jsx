@@ -39,12 +39,13 @@ import CheckboxFunction from './learn9-forms/CheckboxFunction'
 import RadioBtnFunctions from './learn9-forms/RadioBtnFunctions'
 import SelectFunction from './learn9-forms/SelectFunction'
 import CompleteForm from './learn9-forms/CompleteForm'
+import UseState from './learn11-useState/UseState'
 
 const App = () => {
   return (
     <div className='bg-gray-300'>
 
-      <h2 className='text-red-400 text-center font-bold font-serif italic shadow-xl backdrop-blur-2xl hover:text-cyan-400 transition-all hover:scale-105 fixed ml-3 mt-3 bg-transparent hover:transform-3d'>BRAJESH</h2>
+      {/* <h2 className='text-red-400 text-center font-bold font-serif italic shadow-xl backdrop-blur-2xl hover:text-cyan-400 transition-all hover:scale-105 fixed ml-3 mt-3 bg-transparent hover:transform-3d'>BRAJESH</h2>
 
       <ClassComp />
       <Welcome/>
@@ -108,7 +109,9 @@ const App = () => {
       <CheckboxFunction />
       <RadioBtnFunctions />
       <SelectFunction />
-      <CompleteForm />
+      <CompleteForm /> */}
+
+      <UseState />
     </div>
   )
 }
