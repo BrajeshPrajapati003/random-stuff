@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/project1/app/page.tsx"],"sourcesContent":["import React from 'react'\n\nfunction page() {\n  return (\n    <div className='flex justify-center items-center font-bold h-full bg-gradient-to-r from-purple-600 via-pink-500 to-blue-900 bg-clip-text text-transparent text-4xl'>\n      <h1 className='hover:text-white'>Welcome to our Travel Guide Website</h1>\n    </div>\n  )\n}\n\nexport default page\n"],"names":[],"mappings":";;;;;;AAEA,SAAS;IACP,qBACE,kQAAC;QAAI,WAAU;kBACb,cAAA,kQAAC;YAAG,WAAU;sBAAmB;;;;;;;;;;;AAGvC;uCAEe","debugId":null}}]
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/learning-stuff/next/project1/app/page.tsx"],"sourcesContent":["import React from 'react'\r\n\r\nfunction page() {\r\n  return (\r\n    <div className='flex justify-center items-center font-bold h-full bg-gradient-to-r from-purple-600 via-pink-500 to-blue-900 bg-clip-text text-transparent text-4xl'>\r\n      <h1 className='hover:text-white'>Welcome to our Travel Guide Website</h1>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default page\r\n"],"names":[],"mappings":";;;;;;AAEA,SAAS;IACP,qBACE,kQAAC;QAAI,WAAU;kBACb,cAAA,kQAAC;YAAG,WAAU;sBAAmB;;;;;;;;;;;AAGvC;uCAEe","debugId":null}}]
 }
