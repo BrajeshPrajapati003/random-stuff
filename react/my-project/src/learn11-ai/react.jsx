@@ -234,3 +234,4 @@ async function test(){
 console.log("3");
 test();
 console.log("4"); // 3, 1, 4, 2
+
