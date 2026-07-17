@@ -1,0 +1,35 @@
+# diff K8s resources use diff API groups (v1, apps/v1, batch/v1)
+apiVersion: apps/v1 # k8s API version, Deployment uses apps API group
+
+# Pod, Deployment, Service, ConfigMap, Secret
+kind: Deployment # type of K8s object
+
+metadata: # stores identifying info (name, labels, annotations)
+  name: backend-development
+
+spec: # defines desired state/specification
+# define containers, ports, volumes, env variables  
+  replicas: 3
+
+  selector: # selector tells Deployment which pods it manages 
+    matchLabels: # manage pods having label: app=backend
+      app: backend
+
+  template: # defines pod blueprint, Deployment uses this template to create pods
+    metadata:
+      labels: # key-value metadata tags, used for grouping, filtering, service directory
+        app: backend
+        env: production
+        tier: api
+
+    spec:
+      containers:
+        - name: backend
+          image: brajesh/backend:v1
+          # k8s pulls img from: DockerHub, private registry, cloud registry
+
+          ports:
+            - containerPort: 8080
+
+
+

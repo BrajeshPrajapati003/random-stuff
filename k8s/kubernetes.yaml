@@ -1,0 +1,18 @@
+# diff K8s resources use diff API groups (v1, apps/v1, batch/v1)
+apiVersion: v1 # k8s API version
+
+# Pod, Deployment, Service, ConfigMap, Secret
+kind: Pod # type of K8s object
+
+metadata: # stores identifying info (name, labels, annotations)
+  name: springboot-pod
+
+spec: # defines desired state/specification
+# define containers, ports, volumes, env variables
+
+  containers: # containers running inside pod
+    - name: backend
+      image: brajesh/backend:v1 # docker img to run
+      # k8s pulls img from: DockerHub, private registry, cloud registry
+      ports:
+        - containerPort: 8080 # app port inside container (springboot = 8080)
