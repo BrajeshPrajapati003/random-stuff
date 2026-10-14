@@ -10,3 +10,4 @@ services:
     # If we accidentally kill the running container, Docker Compose will restart it
     restart: always
     #The PostgreSQL Docker container uses environment variables to read configuration
+    

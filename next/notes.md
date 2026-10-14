@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 <html lang="en">
       <body
-        className={`${poppins.className}`}
+        className={`${poppins.className}`
         >
         {children}
       </body>
